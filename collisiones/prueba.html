@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Colisiones</title>
+        <meta charset="utf-8">
+        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-entity user-Height="1.75" wasd-controls look-controls kinematic-body></a-entity>
+
+            <a-grid static-body></a-grid>
+
+            <a-sphere static-body position="-2 2 -3" color="blue" shadow id="anchor"></a-sphere>
+            <a-box dynamic-body position="2 4 -3" color="red" scale="2 2 2" shadow  spring="target: #anchor; damping: 0.25; stiffness: 25;"></a-box></a-box>
+        </a-scene>
+    </body>
+</html>
